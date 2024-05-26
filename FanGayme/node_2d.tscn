@@ -1,7 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxnurbmc1pha1"]
 
 [ext_resource type="Texture2D" uid="uid://dbaxwuboon8p2" path="res://ForTheEyesOfTheInnocent.png" id="1_fpwfb"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://cmg0euamk2ho" path="res://Markipliers-Net-Worth-2-683x1024.jpg" id="2_s2yqi"]
+=======
+[ext_resource type="Texture2D" uid="uid://b3l6iot26h4dc" path="res://nothentai.jpg" id="2_kok5f"]
+>>>>>>> cumZone
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,7 +18,6 @@ text = "According to all laws of physics, there is no way a bee"
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1012, 369)
 texture = ExtResource("1_fpwfb")
-offset = Vector2(-130, 0)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -32,5 +35,11 @@ offset_bottom = 475.0
 text = "teenage mutant ninja turtls"
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
+<<<<<<< HEAD
 texture = ExtResource("2_s2yqi")
 offset = Vector2(-600, 0)
+=======
+position = Vector2(-344, 66)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kok5f")
+>>>>>>> cumZone
