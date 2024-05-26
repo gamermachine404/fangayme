@@ -33,4 +33,4 @@ text = "teenage mutant ninja turtls"
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture = ExtResource("2_s2yqi")
-offset = Vector2(-500, 0)
+offset = Vector2(-800, 3)
