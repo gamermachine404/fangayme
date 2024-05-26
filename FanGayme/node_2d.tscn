@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dxnurbmc1pha1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 443.0
+offset_bottom = 47.0
+scale = Vector2(1.16918, 1.16192)
+text = "According to all laws of physics, there is no way a bee"
