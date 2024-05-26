@@ -13,3 +13,9 @@ text = "According to all laws of physics, there is no way a bee"
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1012, 369)
 texture = ExtResource("1_fpwfb")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
