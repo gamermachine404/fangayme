@@ -1,21 +1,72 @@
-[gd_scene load_steps=4 format=3 uid="uid://hjtxu5dop438"]
+[gd_scene load_steps=13 format=3 uid="uid://hjtxu5dop438"]
 
 [ext_resource type="Texture2D" uid="uid://bj80k0gf3m6dk" path="res://bar.svg" id="1_ckpev"]
-[ext_resource type="Script" path="res://flippy.gd" id="2_53tqt"]
+[ext_resource type="Script" path="res://office.gd" id="1_tltwk"]
+[ext_resource type="Texture2D" uid="uid://cjqg4pyyqiakk" path="res://1.svg" id="3_p44v4"]
+[ext_resource type="Texture2D" uid="uid://dgvcfuhaos28c" path="res://2.svg" id="4_25eem"]
+[ext_resource type="Texture2D" uid="uid://dl7nanb1xrc8c" path="res://3.svg" id="5_5aawe"]
+[ext_resource type="Texture2D" uid="uid://b3fu6evlrr1qr" path="res://4.svg" id="6_ds4qt"]
+[ext_resource type="Texture2D" uid="uid://bsh73okb27n3u" path="res://5.svg" id="7_d8eat"]
+[ext_resource type="Texture2D" uid="uid://k3qvcbw3tggi" path="res://6.svg" id="8_13ls8"]
+[ext_resource type="Texture2D" uid="uid://c73fo8tsv3qsn" path="res://7.svg" id="9_5mek4"]
+[ext_resource type="Texture2D" uid="uid://c4j4lccb7v3n3" path="res://8.svg" id="10_fox8n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p00jn"]
-size = Vector2(564.5, 38)
+size = Vector2(564.5, 87)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cgm4w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_p44v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_25eem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5aawe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ds4qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d8eat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_13ls8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5mek4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5mek4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fox8n")
+}],
+"loop": false,
+"name": &"default",
+"speed": 25.0
+}]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_tltwk")
 
 [node name="Bar" type="Sprite2D" parent="."]
 position = Vector2(576, 579)
 scale = Vector2(1.71739, 1.71739)
 texture = ExtResource("1_ckpev")
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("2_53tqt")
+[node name="BarArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(575.75, 579)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarArea"]
+position = Vector2(575.75, 603.5)
 shape = SubResource("RectangleShape2D_p00jn")
+
+[node name="MonitorSprite" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(575.502, 524.75)
+scale = Vector2(2.3381, 2.3381)
+sprite_frames = SubResource("SpriteFrames_cgm4w")
+frame = 8
+frame_progress = 1.0
