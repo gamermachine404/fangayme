@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwvr480icfecv"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_knvsu"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_knvsu")
+
+[node name="StartIGuess" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 241.0
+offset_right = 240.0
+offset_bottom = 309.0
+text = "Start or some shit"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 219.0
+offset_bottom = 130.0
+placeholder_text = "Title or some shit"
