@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwvr480icfecv"]
+[gd_scene load_steps=3 format=3 uid="uid://bwvr480icfecv"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_knvsu"]
 
-[node name="menu" type="Node2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_btufo"]
+font_size = 27
+
+[node name="Menu" type="Node2D"]
 script = ExtResource("1_knvsu")
 
 [node name="StartIGuess" type="Button" parent="."]
@@ -10,11 +13,19 @@ offset_left = 32.0
 offset_top = 241.0
 offset_right = 240.0
 offset_bottom = 309.0
-text = "Start or some shit"
+text = "New game"
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 8.0
-offset_top = 5.0
-offset_right = 219.0
-offset_bottom = 130.0
-placeholder_text = "Title or some shit"
+[node name="Label" type="Label" parent="."]
+offset_right = 277.0
+offset_bottom = 88.0
+text = "Five 
+nights 
+at ur mom's"
+label_settings = SubResource("LabelSettings_btufo")
+
+[node name="StartIGuess2" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 321.0
+offset_right = 240.0
+offset_bottom = 389.0
+text = "Old game"

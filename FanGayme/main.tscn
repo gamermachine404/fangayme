@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bv3n7dn7mt0pt"]
+[gd_scene load_steps=5 format=3 uid="uid://bv3n7dn7mt0pt"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7x8ju"]
+[ext_resource type="Script" path="res://clock.gd" id="2_l5vlr"]
+[ext_resource type="PackedScene" uid="uid://hjtxu5dop438" path="res://office.tscn" id="3_eeljh"]
+[ext_resource type="PackedScene" uid="uid://bwvr480icfecv" path="res://menu.tscn" id="4_d8hoo"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_7x8ju")
+
+[node name="Clock" type="Label" parent="."]
+visible = false
+offset_left = 1104.0
+offset_right = 1152.0
+offset_bottom = 23.0
+text = "12 AM"
+script = ExtResource("2_l5vlr")
+
+[node name="Office" parent="." instance=ExtResource("3_eeljh")]
+
+[node name="Menu" parent="." instance=ExtResource("4_d8hoo")]

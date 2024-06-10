@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://hjtxu5dop438"]
+[gd_scene load_steps=14 format=3 uid="uid://hjtxu5dop438"]
 
 [ext_resource type="Texture2D" uid="uid://bj80k0gf3m6dk" path="res://bar.svg" id="1_ckpev"]
 [ext_resource type="Script" path="res://office.gd" id="1_tltwk"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://k3qvcbw3tggi" path="res://6.svg" id="8_13ls8"]
 [ext_resource type="Texture2D" uid="uid://c73fo8tsv3qsn" path="res://7.svg" id="9_5mek4"]
 [ext_resource type="Texture2D" uid="uid://c4j4lccb7v3n3" path="res://8.svg" id="10_fox8n"]
+[ext_resource type="Texture2D" uid="uid://32ykpwxgocbu" path="res://ofin.png" id="11_70h1o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p00jn"]
 size = Vector2(564.5, 87)
@@ -49,10 +50,11 @@ animations = [{
 "speed": 25.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="Office" type="Node2D"]
 script = ExtResource("1_tltwk")
 
 [node name="Bar" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(576, 579)
 scale = Vector2(1.71739, 1.71739)
 texture = ExtResource("1_ckpev")
@@ -70,3 +72,11 @@ scale = Vector2(2.3381, 2.3381)
 sprite_frames = SubResource("SpriteFrames_cgm4w")
 frame = 8
 frame_progress = 1.0
+
+[node name="Cameras" type="Node2D" parent="."]
+visible = false
+
+[node name="Ofin" type="Sprite2D" parent="Cameras"]
+position = Vector2(558, 299)
+scale = Vector2(3.20968, 3.20968)
+texture = ExtResource("11_70h1o")
