@@ -22,6 +22,7 @@ func _ready():
 	startButton = menu.find_child("StartIGuess") #finds the child node named "StartIGuess" and references it
 	startButton.pressed.connect(startPressed) #triggers the _startPressed function every time the button is pressed
 	continueButton = menu.find_child("StartIGuess2")
+	continueButton.pressed.connect(startNight)
 
 	office.visible = false
 
@@ -36,6 +37,7 @@ func startNight():
 	menu.visible = false
 	office.visible = true
 	Nightclock.startNight()
+	office.startNight()
 
 func updateNight():
 	continueButton.text = "Old game- " + str(night)
