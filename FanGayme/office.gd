@@ -39,6 +39,7 @@ func _process(delta):
 func startNight():
 	#activates at the start of the night
 	randomizeCamTimers()
+	changeCameras(21)
 	for n in 8:
 		#wait function
 		processAnimatronic1Movement()
