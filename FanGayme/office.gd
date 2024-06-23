@@ -7,6 +7,8 @@ var cameraOpen
 var animatronic1Position
 var cameras
 var flipping
+var currentCamera
+var a1Pos
 
 var cameraTimers = [] #Initialize the camera timer array. This will be an array of array of ints.
 #It will look something like this: [[0,0],[1,1,1]]
@@ -71,6 +73,24 @@ func _activateBar():
 	#activates after the mouse comes off the bar
 	$Bar.visible = true
 
+func changeCameras(number):
+	# A-make sure to make it play the shortened blur animation whenever this is called
+	currentCamera = number
+	updateCameras()
+
+func updateCameras():
+	#make it so this function uses the 1 and 2 digit of camera names via unicode to detect
+	#which camera it should switch to
+	#var digit2 = str(currentCamera).unicode_at(1) to check with unicode
+	for image in cameras.find_child("RoomImages").get_children():
+		image.visible = false
+		if int(str(image.name)) == currentCamera:
+			image.visible = true 
+
+
+
+#A-make a separate function here which changes the visual effect of a camera to a blur
+#for a set amount of time whenver an animatronic position changes to or from the value of that camera
 func processAnimatronic1Movement():
 	#process stuff
 	pass
@@ -90,12 +110,14 @@ func setupCameras():
 	for kc in cameras.find_child("CamButtons").get_children():
 		if currentCheckUnicode + 49 != kc.name.unicode_at(3): #Checks unicode at 4th position in name
 			currentCheckUnicode += 1
-			cameraTimers = cameraTimers + [[]] 
+			cameraTimers = cameraTimers + [[]] #[] -> [[]] -> [[],[]] 
 			#Since we can't reference an array with an entry that doesn't exist, we need to make a new one.
 			#The code up there merges an array with the array, so [[0,0]] + [[]] will make [[0,0],[]], for example.
 		cameraTimers[currentCheckUnicode] = cameraTimers[currentCheckUnicode] + [currentCheckUnicode]
 		kc.text = str(kc.name.unicode_at(3)-48) + "_" + str(kc.name.unicode_at(5)-48)
 	print(cameraTimers)
+
+#cameraTimers[0]: gives you 1st element cameraTimers[1]: gives you second
 	
 func randomizeCamTimers():
 	var averages = []

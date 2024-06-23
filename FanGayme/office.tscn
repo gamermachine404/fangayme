@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://hjtxu5dop438"]
+[gd_scene load_steps=32 format=3 uid="uid://hjtxu5dop438"]
 
 [ext_resource type="Texture2D" uid="uid://bj80k0gf3m6dk" path="res://bar.svg" id="1_ckpev"]
 [ext_resource type="Script" path="res://office.gd" id="1_tltwk"]
@@ -12,6 +12,23 @@
 [ext_resource type="Texture2D" uid="uid://c4j4lccb7v3n3" path="res://8.svg" id="10_fox8n"]
 [ext_resource type="Texture2D" uid="uid://32ykpwxgocbu" path="res://ofin.png" id="11_70h1o"]
 [ext_resource type="Texture2D" uid="uid://dxw2nujlimajj" path="res://Cams2.png" id="12_6d1oq"]
+[ext_resource type="Texture2D" uid="uid://oofyhg2jbng0" path="res://2beaun.jpg" id="13_fj7c7"]
+[ext_resource type="Script" path="res://CamButton.gd" id="13_lbtbf"]
+[ext_resource type="Texture2D" uid="uid://mrvdfpxug6gs" path="res://98c_1.jpg" id="15_pw6wl"]
+[ext_resource type="Texture2D" uid="uid://dntu7br4kg276" path="res://876eas.jpg" id="16_vqv5h"]
+[ext_resource type="Texture2D" uid="uid://clcvvynd4gxho" path="res://871192-the-backrooms-camcorder-in-blueprints.jpg" id="17_j265g"]
+[ext_resource type="Texture2D" uid="uid://cw2htk34wkpvt" path="res://DonChipotle.webp" id="18_nruoe"]
+[ext_resource type="Texture2D" uid="uid://jxs35x38d37j" path="res://du9pv5d2w7p31.jpg" id="19_vpfwv"]
+[ext_resource type="Texture2D" uid="uid://s1d3d4u8yqfq" path="res://image_6468fcaeb4ad8c0018ef7d3a_575927.jpeg" id="20_g8ivu"]
+[ext_resource type="Texture2D" uid="uid://gby04cfqa25c" path="res://IMG_1062.jpg" id="21_83n5u"]
+[ext_resource type="Texture2D" uid="uid://v2h4m78y4vuq" path="res://IMG_1325.jpg" id="22_4n352"]
+[ext_resource type="Texture2D" uid="uid://eni7ld7aluxu" path="res://IMG_1953.jpg" id="23_5sf4l"]
+[ext_resource type="Texture2D" uid="uid://bg71p6himyowg" path="res://IMG_2743.png" id="24_pqiu6"]
+[ext_resource type="Texture2D" uid="uid://ce2x2albj0qe5" path="res://meurstare.png" id="25_kf0x3"]
+[ext_resource type="Texture2D" uid="uid://g7fe2d4gcga7" path="res://P0004870_bc2fd189216f4d1da0ccf59786eb0790.jpg" id="26_sctmo"]
+[ext_resource type="Texture2D" uid="uid://b2wcwpjle3e84" path="res://porn-collection.webp" id="27_0dqm5"]
+[ext_resource type="Texture2D" uid="uid://e0xp8s3ufo04" path="res://surprisedpointing.png" id="28_mjsmr"]
+[ext_resource type="Texture2D" uid="uid://ddf1ceq6t538v" path="res://ZacharysDream.webp" id="29_8peu7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p00jn"]
 size = Vector2(564.5, 87)
@@ -76,18 +93,14 @@ frame_progress = 1.0
 
 [node name="Cameras" type="Node2D" parent="."]
 
-[node name="Ofin" type="Sprite2D" parent="Cameras"]
-visible = false
-position = Vector2(558, 299)
-scale = Vector2(3.20968, 3.20968)
-texture = ExtResource("11_70h1o")
-
 [node name="Cams2" type="Sprite2D" parent="Cameras"]
+z_index = 1
 position = Vector2(247, 278)
 scale = Vector2(0.915414, 0.915413)
 texture = ExtResource("12_6d1oq")
 
 [node name="CamButtons" type="Control" parent="Cameras"]
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_left = 3.0
@@ -105,6 +118,7 @@ offset_right = 456.54
 offset_bottom = 89.903
 action_mode = 0
 text = "1-1"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam1_2" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -117,6 +131,7 @@ offset_right = 320.54
 offset_bottom = 13.0
 action_mode = 0
 text = "1-2"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam2_1" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -129,6 +144,7 @@ offset_right = 373.54
 offset_bottom = 163.0
 action_mode = 0
 text = "2-1"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam2_2" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -141,6 +157,7 @@ offset_right = 457.54
 offset_bottom = 180.0
 action_mode = 0
 text = "2-2"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam2_3" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -153,6 +170,7 @@ offset_right = 381.54
 offset_bottom = 285.0
 action_mode = 0
 text = "2-3"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam3_1" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -165,6 +183,7 @@ offset_right = 300.54
 offset_bottom = 327.0
 action_mode = 0
 text = "Cam6"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam3_2" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -177,6 +196,7 @@ offset_right = 304.54
 offset_bottom = 395.0
 action_mode = 0
 text = "Cam7"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam3_3" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -189,6 +209,7 @@ offset_right = 424.54
 offset_bottom = 523.0
 action_mode = 0
 text = "Cam8"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam4_1" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -201,6 +222,7 @@ offset_right = 236.54
 offset_bottom = 527.0
 action_mode = 0
 text = "Cam9"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam4_2" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -213,6 +235,7 @@ offset_right = 223.54
 offset_bottom = 327.0
 action_mode = 0
 text = "Cam10"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam4_3" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -225,6 +248,7 @@ offset_right = 216.54
 offset_bottom = 270.0
 action_mode = 0
 text = "Cam11"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam5_1" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -237,6 +261,7 @@ offset_right = 164.54
 offset_bottom = 492.0
 action_mode = 0
 text = "Cam5_1"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam5_2" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -249,6 +274,7 @@ offset_right = 53.5401
 offset_bottom = 515.0
 action_mode = 0
 text = "Cam13"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam5_3" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -261,6 +287,7 @@ offset_right = 50.5401
 offset_bottom = 414.0
 action_mode = 0
 text = "Cam14"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam6_1" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -273,6 +300,7 @@ offset_right = 133.54
 offset_bottom = 197.0
 action_mode = 0
 text = "Cam15"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam6_2" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -285,6 +313,7 @@ offset_right = 133.54
 offset_bottom = 121.0
 action_mode = 0
 text = "Cam16"
+script = ExtResource("13_lbtbf")
 
 [node name="Cam6_3" type="Button" parent="Cameras/CamButtons"]
 layout_mode = 1
@@ -297,3 +326,99 @@ offset_right = 134.54
 offset_bottom = 13.0
 action_mode = 0
 text = "Cam17"
+script = ExtResource("13_lbtbf")
+
+[node name="RoomImages" type="Node2D" parent="Cameras"]
+
+[node name="11" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+z_index = -1
+position = Vector2(581, 321.5)
+scale = Vector2(1.53333, 0.885403)
+texture = ExtResource("13_fj7c7")
+
+[node name="12" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(558, 299)
+scale = Vector2(3.20968, 3.20968)
+texture = ExtResource("11_70h1o")
+
+[node name="21" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(585, 297)
+texture = ExtResource("15_pw6wl")
+
+[node name="22" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(582, 288)
+texture = ExtResource("16_vqv5h")
+
+[node name="23" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(582, 320)
+scale = Vector2(0.567593, 0.567593)
+texture = ExtResource("17_j265g")
+
+[node name="31" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(564, 308)
+texture = ExtResource("18_nruoe")
+
+[node name="32" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(559, 302)
+texture = ExtResource("19_vpfwv")
+
+[node name="33" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(553, 302)
+texture = ExtResource("20_g8ivu")
+
+[node name="41" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(542, 296)
+texture = ExtResource("21_83n5u")
+
+[node name="42" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(536, 288)
+texture = ExtResource("22_4n352")
+
+[node name="43" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(563, 323)
+scale = Vector2(0.134755, 0.134755)
+texture = ExtResource("23_5sf4l")
+
+[node name="51" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(566, 316)
+scale = Vector2(0.317383, 0.317383)
+texture = ExtResource("24_pqiu6")
+
+[node name="52" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(567, 291)
+texture = ExtResource("25_kf0x3")
+
+[node name="53" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(579, 420)
+scale = Vector2(0.469363, 0.324755)
+texture = ExtResource("26_sctmo")
+
+[node name="61" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(562, 333)
+texture = ExtResource("27_0dqm5")
+
+[node name="62" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(562, 326)
+texture = ExtResource("28_mjsmr")
+
+[node name="63" type="Sprite2D" parent="Cameras/RoomImages"]
+visible = false
+position = Vector2(576, 321)
+scale = Vector2(0.465741, 0.465741)
+texture = ExtResource("29_8peu7")
